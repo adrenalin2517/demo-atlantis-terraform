@@ -7,11 +7,6 @@ provider "aws" {
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "demo-atlantis-bucket" # Set a unique bucket name
 }
-
-resource "aws_s3_bucket" "my_bucket_test" {
-  bucket = "demo-atlantis-bucket-test" # Set a unique bucket name
-}
-
 terraform {
   backend "s3" {
     bucket  = "terraform-atlantis-state" # Set a unique bucket name for storing Terraform state
