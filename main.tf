@@ -8,18 +8,6 @@ resource "aws_s3_bucket" "my_bucket" {
   bucket = "demo-atlantis-bucket" # Set a unique bucket name
 }
 
-resource "aws_s3_bucket" "my_bucket_2" {
-  bucket = "demo-atlantis-bucket-2" # Set a unique bucket name
-}
-
-resource "aws_s3_bucket" "my_bucket_3" {
-  bucket = "demo-atlantis-bucket-3" # Set a unique bucket name
-}
-
-resource "aws_s3_bucket" "my_bucket_4" {
-  bucket = "demo-atlantis-bucket-4" # Set a unique bucket name
-}
-
 terraform {
   backend "s3" {
     bucket  = "terraform-atlantis-state" # Set a unique bucket name for storing Terraform state
